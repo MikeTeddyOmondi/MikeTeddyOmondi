@@ -1,0 +1,17 @@
+{
+	"name": "mike-teddy-omondi",
+	"version": "1.0.0",
+	"description": "A personal website that journals all the things Mike Teddy Omondi is enthusiastic about",
+	"main": "index.js",
+	"scripts": {
+		"start": "eleventy --serve",
+		"build": "eleventy"
+	},
+	"keywords": [],
+	"author": "MikeTeddyOmondi",
+	"license": "MIT",
+	"devDependencies": {
+		"@11ty/eleventy": "^0.12.1",
+		"luxon": "^2.0.2"
+	}
+}
