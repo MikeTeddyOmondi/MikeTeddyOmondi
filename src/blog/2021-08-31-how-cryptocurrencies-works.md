@@ -4,7 +4,7 @@ author: Mike Teddy Omondi
 date: 2021-08-31
 tags: ["post", "featured"]
 image: /assets/blog/2021-08-31-how-cryptocurrencies-works.jpg
-imageAlt: Cryptocurrency
+imageAlt: Business
 description: This article discusses on how cryptocurrencies work.
 ---
 

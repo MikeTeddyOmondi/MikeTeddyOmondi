@@ -2,13 +2,17 @@
 title: What is Cryptocurrency?
 author: Mike Teddy Omondi
 date: 2021-08-01
-tags: ["post", "featured"]
-image: /assets/blog/2021-08-01-what-is-cryptocurrency.jpg
-imageAlt: Cryptocurrency
+tags: ["post"]
+image: /assets/blog/2021-08-01-what-is-cryptocurrency_1200x714.jpg
+imageAlt: ["Business", " Crypto"]
 description: An article on what cryptocurrency entails and all you need to know.
 ---
 
 # What Is Cryptocurrency?
+
+srcset="{{ post.data.image }} 1x, {{ post.data.image }} 2x"
+/assets/img/thumbs/masonry/woodcraft-600.jpg
+/assets/blog/2021-08-01-what-is-cryptocurrency.jpg
 
 Well, it's a type of digital currency that relies on cryptography and anonymity to help protect users against fraud activities and also being scammed. It involves the creation or exchange in transactions through computers and their whole operation revolves around cryptographic protocols for tracking money movement between each other (distributed ledgers - blockchains) so they're essentially cashless. In addition, "digital wallets" are used everyday along with various forms of electronic cards to allow transactions to be done through brokers.
 
