@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: MikeTeddyOmondi/MikeTeddyOmondi
   branch: master
 media_folder: "public/assets/blog"
 public_folder: "/assets/blog"
