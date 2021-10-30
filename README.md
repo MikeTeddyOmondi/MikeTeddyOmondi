@@ -1,4 +1,4 @@
-## Hey 👋, This is Mike Teddy Omondi
+# Hey 👋, I'm Mike Teddy Omondi
 
 [![Gmail Badge](https://img.shields.io/badge/-mike_omondi@outlook.com-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:mike_omondi@outlook.com)](mailto:mike_omondi@outlook.com)
 [![Linkedin Badge](https://img.shields.io/badge/-MikeTeddyOmondi-0072b1?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/MikeTeddyOmondi/)](https://www.linkedin.com/in/MikeTeddyOmondi/) [![Github Badge](https://img.shields.io/badge/-MikeTeddyOmondi-grey?style=flat&logo=github&logoColor=white&link=https://github.com/MikeTeddyOmondi/)](https://www.github.com/MikeTeddyOmondi/) [![Twitter Badge](https://img.shields.io/badge/-MikeTeddyOmondi-00acee?style=flat&logo=twitter&logoColor=white&link=https://twitter.com/MikeTeddyOmondi/)](https://www.twitter.com/MikeTeddyOmondi/) [![Portfolio Badge](https://img.shields.io/badge/portfolio-web-blue?style=flat&link=www.ranckosolutions.com/projects.html/)](www.ranckosolutions.com/projects.html/) <p align='left'>
@@ -12,7 +12,7 @@
 IT help desk services.\
 IT troubleshooting skills.\
 System architecture design.\
-Project management.\
+Software Project management.\
 Innovative thinking.\
 Service-focused.
 
