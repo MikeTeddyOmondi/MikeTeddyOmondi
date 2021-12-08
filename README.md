@@ -1,4 +1,4 @@
-# Hey 👋, I'm Mike Teddy Omondi
+# Mike Teddy Omondi 👋
 
 [![Gmail Badge](https://img.shields.io/badge/-mike_omondi@outlook.com-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:mike_omondi@outlook.com)](mailto:mike_omondi@outlook.com)
 [![Linkedin Badge](https://img.shields.io/badge/-MikeTeddyOmondi-0072b1?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/MikeTeddyOmondi/)](https://www.linkedin.com/in/MikeTeddyOmondi/) [![Github Badge](https://img.shields.io/badge/-MikeTeddyOmondi-grey?style=flat&logo=github&logoColor=white&link=https://github.com/MikeTeddyOmondi/)](https://www.github.com/MikeTeddyOmondi/) [![Twitter Badge](https://img.shields.io/badge/-MikeTeddyOmondi-00acee?style=flat&logo=twitter&logoColor=white&link=https://twitter.com/MikeTeddyOmondi/)](https://www.twitter.com/MikeTeddyOmondi/) [![Portfolio Badge](https://img.shields.io/badge/portfolio-web-blue?style=flat&link=www.ranckosolutions.com/projects.html/)](www.ranckosolutions.com/projects.html/) <p align='left'>
@@ -9,12 +9,10 @@
 
 ---
 
-IT help desk services.\
-IT troubleshooting skills.\
-System architecture design.\
-Software Project management.\
-Innovative thinking.\
-Service-focused.
+Consultation services.\
+Software engineering.\
+Project management.\
+Bug bounty and fixing.
 
 ---
 
@@ -89,23 +87,25 @@ Tel: +254-727-716382
 
 ---
 
-### Certifications
+### Certifications (_& constantly learning..._)
 
 ---
 
 Programming [full stack development] using: -
-
-1. Frontend - Web technologies (HTML, CSS & JavaScript);
-2. Backend –JavaScript (Node JS) and Python;
+  
+  1. Frontend - Web technologies (HTML, CSS & JavaScript);
+  2. Backend –JavaScript (Node JS) and Python;
 
 Databases – SQL (MySQL/PostgreSQL) & NoSQL (MongoDB)
 database technologies
 
-Application Programming Interface(s) (API | RESTful Structure implementation)
+Application Programming Interface(s) (API | RESTful Structures implementation)
 
 Containerization of software applications – Docker
 
-Certified Ethical Hacking: Penetration Testing and Offensive cybersecurity
+Orchestration of containerized applications - Kubernetes
+
+Certified Ethical Hacking: Penetration Testing and Offensive Cybersecurity
 
 ---
 
