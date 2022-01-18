@@ -360,7 +360,7 @@
         ssBricksAnimate();
         ssSlickSlider();
         ssSmoothScroll();
-        ssAjaxChimp();
+        //ssAjaxChimp();
         ssBackToTop();
 
     })();
