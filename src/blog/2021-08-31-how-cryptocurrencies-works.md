@@ -8,8 +8,6 @@ imageAlt: Business
 description: This article discusses on how cryptocurrencies work.
 ---
 
-# How Cryptocurrencies Work
-
 It’s true that the source codes and technical controls that support and secure cryptocurrencies are highly complex. However, laypeople are more than capable of understanding the basic concepts and becoming informed cryptocurrency users.
 
 Several concepts govern cryptocurrencies’ values, security, and integrity.
@@ -56,6 +54,6 @@ Many lesser-used cryptocurrencies can only be exchanged through private, peer-to
 
 ---
 
-_**Pro tip**: Are you planning to start investing in Bitcoin or another cryptocurrency? Crypto.com is one of the largest platforms to trade Bitcoin and many other altcoins like Ethereum, Cardano and Dogecoin. Go check out [here](/#referrals) to get a $25 worth free of CRO coins upon sigining up for an account with Crypto.com app._
+_**Pro tip**: Are you planning to start investing in Bitcoin or another cryptocurrency? Crypto.com is one of the largest platforms to trade Bitcoin and many other altcoins like Ethereum, Cardano and Dogecoin. Go check out [here](https://crypto.com/app/68mrmzsa5w) to get a $25 worth free of CRO coins upon sigining up for an account with Crypto.com app._
 
 ---

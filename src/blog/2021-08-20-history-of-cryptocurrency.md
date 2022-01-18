@@ -8,8 +8,6 @@ imageAlt: Business
 description: This article highlights on the history of cryptocurrency and how it was developed.
 ---
 
-# History of Cryptocurrency
-
 Cryptocurrency existed theoretically as a construct way before the first digital alternative currencies debuted. Early cryptocurrency proponents shared the goal of applying cutting-edge mathematical and Computer Science principles, theories and alggorithms to solve what they perceived as practical and political shortcomings of “traditional” fiat currencies (what we are currently using).
 
 ### Before Bitcoin
@@ -50,6 +48,6 @@ As seen in the trends, it is evident that this means of currency exchange is sti
 
 ---
 
-_**Pro tip**: Are you planning to start investing in Bitcoin or another cryptocurrency? Crypto.com is one of the largest platforms to trade Bitcoin and many other altcoins like Ethereum, Cardano and Dogecoin. Go check out [here](/#referrals) to get a $25 worth free of CRO coins upon sigining up for an account with Crypto.com app._
+_**Pro tip**: Are you planning to start investing in Bitcoin or another cryptocurrency? Crypto.com is one of the largest platforms to trade Bitcoin and many other altcoins like Ethereum, Cardano and Dogecoin. Go check out [here](https://crypto.com/app/68mrmzsa5w) to get a $25 worth free of CRO coins upon sigining up for an account with Crypto.com app._
 
 ---
