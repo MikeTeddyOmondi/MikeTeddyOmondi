@@ -1,0 +1,172 @@
+---
+title: Mike Teddy Omondi
+layout: base.njk
+---
+
+<section class="s-bricks">
+
+    <div class="masonry">
+        <div class="bricks-wrapper h-group">
+
+            <div class="grid-sizer"></div>
+
+            <div style="width: 100%;" class="brick entry featured-grid animate-this">
+                <div class="entry__content">
+
+                    <div class="featured-post-slider">
+                        
+                        <div class="featured-post-slide">
+                            <div class="f-slide">
+                                
+                                <div class="f-slide__background" style="background-image:url('/assets/img/thumbs/featured/FarmBot_Genesis_2400x.jpg');"></div>
+                                <div class="f-slide__overlay"></div>
+
+                                <div class="f-slide__content">
+                                    <ul class="f-slide__meta">
+                                        <li></li> 
+                                        <li><a href="#"></a></li>
+                                    </ul>	
+
+                                    <h1 class="f-slide__title">
+                                        <a href="#" title="">
+                                            Here I share with you my views on agriculture, business, food, lifestyle and technology.
+                                        </a>
+                                    </h1> 
+                                </div>
+
+                            </div> <!-- f-slide -->
+                        </div> <!-- featured-post-slide -->
+
+                        <div class="featured-post-slide">
+                            <div class="f-slide">
+                                
+                                <div class="f-slide__background" style="background-image:url('/assets/img/thumbs/featured/featured-2.jpg');"></div>
+                                <div class="f-slide__overlay"></div>
+
+                                <div class="f-slide__content">
+                                    <ul class="f-slide__meta">
+                                        <li></li> 
+                                        <li><a href="#"></a></li>
+                                    </ul>
+
+                                    <h1 class="f-slide__title">
+                                        <a href="" title="">
+                                            Check out my blogs <a href="/blogs" style="color: blue;">here</a>.
+                                        </a>
+                                    </h1> 
+                                </div>
+
+                            </div> <!-- f-slide -->
+                        </div> <!-- featured-post-slide -->
+
+                        <div class="featured-post-slide">
+                            <div class="f-slide">
+                                
+                                <div class="f-slide__background" style="background-image:url('/assets/img/thumbs/featured/featured-1.jpg');"></div>
+                                <div class="f-slide__overlay"></div>
+
+                                <div class="f-slide__content">
+                                    <ul class="f-slide__meta">
+                                        <li></li> 
+                                        <li><a href="#"></a></li>
+                                    </ul>
+
+                                    <h1 class="f-slide__title">
+                                        <a href="#" title="">
+                                            Feel like we've not connected enough? Don't hesitate to contact me <a href="/contact" style="color: blue;">here</a>;
+                                            not forgetting my social handles below.
+                                        </a>
+                                    </h1> 
+                                </div>
+
+                            </div> <!-- f-slide -->
+                        </div> <!-- featured-post-slide -->
+
+                    </div> <!-- end feature post slider -->
+                    
+                    <div class="featured-post-nav">
+                        <button class="featured-post-nav__prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.707 17.293L8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path></svg>
+                        </button>
+                        <button class="featured-post-nav__next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
+                        </button>
+                    </div> <!-- featured-post-nav -->
+
+                </div> <!-- end entry content -->
+            </div> <!-- end entry, featured grid -->
+            
+            <article class="brick entry format-standard animate-this" style="">
+                <div class="entry__text">
+                    <p class="lead drop-cap">Hi? I am <a href="https://github.com/MikeTeddyOmondi/">Mike Otieno</a>, a computer enthusiast specifically interested in network and security. 
+                        I learn & work with on-prem and cloud infrastructure, platforms and software involved, including tools, required to enforce network administration and computer systems security. 
+                    </p> 
+                </div>
+            </article>
+            <article class="brick entry format-standard animate-this">
+                <div class="entry__text">
+                    <p class="lead">In addition I am also well-versed 
+                        in numerous programming languages like C/C++, JavaScript and Python. I use scripting languages and their framworks, i.e for web application development & to 
+                        automate daily repetitive tasks involved in line of defense and security of networks systems. 
+                    </p> 
+                </div>
+            </article>
+            <article class="brick entry format-standard animate-this">
+                <div class="entry__text">
+                    <p class="lead"> 
+                        In search for strong background & practical knowledge in distributed systems, I use DevOps practices to deliver software to meet client needs.
+                        I warmly welcome you to subscribe to my newsletter <a href="#mc-form" style="color: blue;">here</a> to get new articles on trending topics of interest like agriculture, business, food and lifestyle.
+                    </p> 
+                </div>
+            </article>
+        </div> <!-- end brick-wrapper --> 
+
+    </div> <!-- end masonry -->
+
+</section> <!-- end s-bricks -->
+
+<section class="s-pageheader">
+    <div class="row current-cat">
+        <div class="column">
+            <h1 class="h2">Featured Articles</h1>
+        </div>
+    </div>
+</section>
+
+
+<section  class="s-bricks">
+    <div class="masonry">
+        <div class="bricks-wrapper h-group">
+            <ul role="list" class="articles__list flow">
+
+                {% for post in collections.featured | reverse %}
+                    {# {% include 'article-snippet.njk' %} #}
+                {% endfor %}
+            
+            </ul>
+
+        </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="s-pageheader">
+    <div class="row current-cat">
+        <div class="column">
+            <h3 class="h2">Signup for Crypto.com</h3>
+        </div>
+    </div>
+</section>
+
+<section  class="s-bricks">
+    <center>
+        <img src="./assets/img/crypto_com.jpg" class="img-fluid mt-3" alt="image"/>
+        <p><strong>Use my referral link to sign up for Crypto.com and get $25 for free and start transacting with cryptocurrency:</strong></p>
+        <form action="https://crypto.com/app/68mrmzsa5w">
+            <button type="submit" class="btn btn-lg btn-secondary fluid btn--neutral" style="display: flex; flex-direction: row;">Sign Up</button>
+        </form>
+    </center>
+</section>
+
+<hr>

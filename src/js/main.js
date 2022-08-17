@@ -1,368 +1,291 @@
-/* ===================================================================
- * Abstract 2.0.0 - Main JS
+/** 
+ * ===================================================================
+ * main js
  *
- * ------------------------------------------------------------------- */ 
+ * ------------------------------------------------------------------- 
+ */ 
 
 (function($) {
 
-    "use strict";
-
-    const cfg = {
-        scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc' // MailChimp URL
-    }
-
-
-   /* preloader
-    * -------------------------------------------------- */
-    const ssPreloader = function() {
+	"use strict";
 
-        const preloader = document.querySelector('#preloader');
-        if (!preloader) return;
+	/*---------------------------------------------------- */
+	/* Preloader
+	------------------------------------------------------ */ 
+   $(window).load(function() {
 
-        document.querySelector('html').classList.add('ss-preload');
-        
-        window.addEventListener('load', function() {
-            
-            document.querySelector('html').classList.remove('ss-preload');
-            document.querySelector('html').classList.add('ss-loaded');
+      // will first fade out the loading animation 
+    	$("#loader").fadeOut("slow", function(){
 
-            preloader.addEventListener('transitionend', function(e) {
-                if (e.target.matches("#preloader")) {
-                    this.style.display = 'none';
-                }
-            });
-        });
+        // will fade out the whole DIV that covers the website.
+        $("#preloader").delay(300).fadeOut("slow");
 
-        // force page scroll position to top at page refresh
-        // window.addEventListener('beforeunload' , function () {
-        //     window.scrollTo(0, 0);
-        // });
+      });       
 
-    }; // end ssPreloader
+  	})
 
 
+  	/*---------------------------------------------------- */
+  	/* FitText Settings
+  	------------------------------------------------------ */
+  	setTimeout(function() {
 
-   /* alert boxes
-    * ------------------------------------------------------ */
-    const ssAlertBoxes = function() {
+   	$('#intro h1').fitText(1, { minFontSize: '42px', maxFontSize: '84px' });
 
-        const boxes = document.querySelectorAll('.alert-box');
-        if (!boxes) return;
+  	}, 100);
 
-        boxes.forEach(function(box) {
 
-            box.addEventListener('click', function(e){
-                if (e.target.matches(".alert-box__close")) {
-                    e.stopPropagation();
-                    e.target.parentElement.classList.add("hideit");
-
-                    setTimeout(function() {
-                        box.style.display = "none";
-                    }, 500)
-                }    
-            });
-
-        })
+	/*---------------------------------------------------- */
+	/* FitVids
+	------------------------------------------------------ */ 
+  	$(".fluid-video-wrapper").fitVids();
 
-    }; // end ssAlertBoxes
 
+	/*---------------------------------------------------- */
+	/* Owl Carousel
+	------------------------------------------------------ */ 
+	$("#owl-slider").owlCarousel({
+        navigation: false,
+        pagination: true,
+        itemsCustom : [
+	        [0, 1],
+	        [700, 2],
+	        [960, 3]
+	     ],
+        navigationText: false
+    });
 
-   /* Mobile Menu
-    * ---------------------------------------------------- */ 
-    const ssMobileMenu = function() {
 
-        const $navWrap = $('.s-header__nav-wrap');
-        const $closeNavWrap = $navWrap.find('.s-header__overlay-close');
-        const $menuToggle = $('.s-header__toggle-menu');
-        const $siteBody = $('body');
-        
-        $menuToggle.on('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
+	/*----------------------------------------------------- */
+	/* Alert Boxes
+  	------------------------------------------------------- */
+	$('.alert-box').on('click', '.close', function() {
+	  $(this).parent().fadeOut(500);
+	});	
 
-            $siteBody.addClass('nav-wrap-is-visible');
-        });
 
-        $closeNavWrap.on('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-        
-            if($siteBody.hasClass('nav-wrap-is-visible')) {
-                $siteBody.removeClass('nav-wrap-is-visible');
-            }
-        });
+	/*----------------------------------------------------- */
+	/* Stat Counter
+  	------------------------------------------------------- */
+   var statSection = $("#stats"),
+       stats = $(".stat-count");
 
-        // open (or close) submenu items in mobile view menu. 
-        // close all the other open submenu items.
-        $('.s-header__nav .has-children').children('a').on('click', function (e) {
-            e.preventDefault();
+   statSection.waypoint({
 
-            if ($(".close-mobile-menu").is(":visible") == true) {
+   	handler: function(direction) {
 
-                $(this).toggleClass('sub-menu-is-open')
-                    .next('ul')
-                    .slideToggle(200)
-                    .end()
-                    .parent('.has-children')
-                    .siblings('.has-children')
-                    .children('a')
-                    .removeClass('sub-menu-is-open')
-                    .next('ul')
-                    .slideUp(200);
+      	if (direction === "down") {       		
 
-            }
-        });
+			   stats.each(function () {
+				   var $this = $(this);
 
-    }; // end ssMobileMenu
+				   $({ Counter: 0 }).animate({ Counter: $this.text() }, {
+				   	duration: 4000,
+				   	easing: 'swing',
+				   	step: function (curValue) {
+				      	$this.text(Math.ceil(curValue));
+				    	}
+				  	});
+				});
 
+       	} 
 
-   /* search
-    * ------------------------------------------------------ */
-    const ssSearch = function() {
+       	// trigger once only
+       	this.destroy();      	
 
-        const searchWrap = document.querySelector('.s-header__search');
-        const searchTrigger = document.querySelector('.s-header__search-trigger');
+		},
+			
+		offset: "90%"
+	
+	});	
 
-        if (!(searchWrap && searchTrigger)) return;
 
-        const searchField = searchWrap.querySelector('.s-header__search-field');
-        const closeSearch = searchWrap.querySelector('.s-header__overlay-close');
-        const siteBody = document.querySelector('body');
+	/*---------------------------------------------------- */
+	/*	Masonry
+	------------------------------------------------------ */
+	var containerProjects = $('#folio-wrapper');
 
-        searchTrigger.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
+	containerProjects.imagesLoaded( function() {
 
-            siteBody.classList.add('search-is-visible');
-            setTimeout(function(){
-                searchWrap.querySelector('.s-header__search-field').focus();
-            }, 100);
-        });
+		containerProjects.masonry( {		  
+		  	itemSelector: '.folio-item',
+		  	resize: true 
+		});
 
-        closeSearch.addEventListener('click', function(e) {
-            e.stopPropagation();
-
-            if(siteBody.classList.contains('search-is-visible')) {
-                siteBody.classList.remove('search-is-visible');
-                setTimeout(function(){
-                    searchWrap.querySelector('.s-header__search-field').blur();
-                }, 100);
-            }
-        });
-
-        searchWrap.addEventListener('click', function(e) {
-            if( !(e.target.matches('.s-header__search-field')) ) {
-                closeSearch.dispatchEvent(new Event('click'));
-            }
-        });
-
-        searchField.addEventListener('click', function(e) {
-            e.stopPropagation();
-        })
-
-        searchField.setAttribute('placeholder', 'Type Keywords');
-        searchField.setAttribute('autocomplete', 'off');
-
-    }; // end ssSearch
-
-
-   /* masonry
-    * ------------------------------------------------------ */
-    const ssMasonry = function() {
-        const containerBricks = document.querySelector('.bricks-wrapper');
-        if (!containerBricks) return;
-
-        imagesLoaded(containerBricks, function() {
-
-            const msnry = new Masonry(containerBricks, {
-                itemSelector: '.entry',
-                columnWidth: '.grid-sizer',
-                percentPosition: true,
-                resize: true
-            });
-
-        });
-
-    }; // end ssMasonry
-
-
-   /* animate bricks
-    * ------------------------------------------------------ */
-    const ssBricksAnimate = function() {
-
-        const animateEl = document.querySelectorAll('.animate-this');
-        if (!animateEl) return;
-
-        window.addEventListener('load', function() {
-
-            setTimeout(function() {
-                animateEl.forEach(function(item, ctr) {
-                    let el = item;
-                        
-                    setTimeout(function() {
-                        el.classList.add('animated', 'fadeInUp');
-                    }, ctr * 200);
-                });
-            }, 200);
-        });
-
-        window.addEventListener('resize', function() {
-            // remove animation classes
-            animateEl.forEach(function(item) {
-                let el = item;
-                el.classList.remove('animate-this', 'animated', 'fadeInUp');
-            });
-        });
-
-    }; // end ssBricksAnimate
-
-
-   /* slick slider
-    * ------------------------------------------------------ */
-    const ssSlickSlider = function() {
-
-        function ssRunFeaturedSlider() {
-
-            const $fSlider = $('.featured-post-slider').slick({
-                arrows: false,
-                dots: false,
-                speed: 1000,
-                fade: true,
-                cssEase: 'linear',
-                slidesToShow: 1,
-                centerMode: true
-            });
-
-            $('.featured-post-nav__prev').on('click', function() {
-                $fSlider.slick('slickPrev');
-            });
-
-            $('.featured-post-nav__next').on('click', function() {
-                $fSlider.slick('slickNext');
-            });
-        
-        } // end ssRunFeaturedSlider
-
-        function ssRunGallerySlider() {
-
-            const $gallery = $('.slider__slides').slick({
-                arrows: false,
-                dots: true,
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                adaptiveHeight: true,
-                pauseOnFocus: false,
-                fade: true,
-                cssEase: 'linear'
-            });
-            
-            $('.slider__slide').on('click', function() {
-                $gallery.slick('slickGoTo', parseInt($gallery.slick('slickCurrentSlide')) + 1);
-            });
-            
-        } // end ssRunGallerySlider
-
-        ssRunFeaturedSlider();
-        ssRunGallerySlider();
-
-    }; // end ssSlickSlider
-
-
-   /* Smooth Scrolling
-    * ------------------------------------------------------ */
-    const ssSmoothScroll = function() {
-
-        $('.smoothscroll').on('click', function (e) {
-            let target  = this.hash,
-                $target = $(target);
-        
-            e.preventDefault();
-            e.stopPropagation();
-
-            $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-            }, cfg.scrollDuration, 'swing').promise().done(function () {
-
-            window.location.hash = target;
-            });
-        });
-
-    }; // endSmoothScroll
-
-
-   /* AjaxChimp
-    * ------------------------------------------------------ */
-    const ssAjaxChimp = function() {
-
-        $('#mc-form').ajaxChimp({
-            language: 'es',
-            url: cfg.mailChimpURL
-        });
-
-        // Mailchimp translation
-        //
-        //  Defaults:
-        //	 'submit': 'Submitting...',
-        //  0: 'We have sent you a confirmation email',
-        //  1: 'Please enter a value',
-        //  2: 'An email address must contain a single @',
-        //  3: 'The domain portion of the email address is invalid (the portion after the @: )',
-        //  4: 'The username portion of the email address is invalid (the portion before the @: )',
-        //  5: 'This email address looks fake or invalid. Please enter a real email address'
-
-        $.ajaxChimp.translations.es = {
-            'submit': 'Submitting...',
-            0: '<i class="fa fa-check"></i> We have sent you a confirmation email',
-            1: '<i class="fa fa-warning"></i> You must enter a valid e-mail address.',
-            2: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-            3: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-            4: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-            5: '<i class="fa fa-warning"></i> E-mail address is not valid.'
-        } 
-
-    }; // end ssAjaxChimp
-    
-    
-   /* back to top
-    * ------------------------------------------------------ */
-    const ssBackToTop = function() {
-
-        const pxShow = 800;
-        const goTopButton = document.querySelector(".ss-go-top");
-
-        if (!goTopButton) return;
-
-        // Show or hide the button
-        if (window.scrollY >= pxShow) goTopButton.classList.add("link-is-visible");
-
-        window.addEventListener('scroll', function() {
-            if (window.scrollY >= pxShow) {
-                if(!goTopButton.classList.contains('link-is-visible')) goTopButton.classList.add("link-is-visible")
-            } else {
-                goTopButton.classList.remove("link-is-visible")
-            }
-        });
-
-    }; // end ssBackToTop
-
-
-   /* Initialize
-    * ------------------------------------------------------ */
-    (function ssInit() {
-
-        ssPreloader();
-        ssAlertBoxes();
-        ssSearch();
-        ssMobileMenu();
-        ssMasonry();
-        ssBricksAnimate();
-        ssSlickSlider();
-        ssSmoothScroll();
-        //ssAjaxChimp();
-        ssBackToTop();
-
-    })();
+	});
+
+
+	/*----------------------------------------------------*/
+	/*	Modal Popup
+	------------------------------------------------------*/
+   $('.item-wrap a').magnificPopup({
+
+      type:'inline',
+      fixedContentPos: false,
+      removalDelay: 300,
+      showCloseBtn: false,
+      mainClass: 'mfp-fade'
+
+   });
+
+   $(document).on('click', '.popup-modal-dismiss', function (e) {
+   	e.preventDefault();
+   	$.magnificPopup.close();
+   });
+
+	
+	/*-----------------------------------------------------*/
+  	/* Navigation Menu
+   ------------------------------------------------------ */  
+   var toggleButton = $('.menu-toggle'),
+       nav = $('.main-navigation');
+
+   // toggle button
+   toggleButton.on('click', function(e) {
+
+		e.preventDefault();
+		toggleButton.toggleClass('is-clicked');
+		nav.slideToggle();
+
+	});
+
+   // nav items
+  	nav.find('li a').on("click", function() {   
+
+   	// update the toggle button 		
+   	toggleButton.toggleClass('is-clicked'); 
+   	// fadeout the navigation panel
+   	nav.fadeOut();   		
+   	     
+  	});
+
+
+   /*---------------------------------------------------- */
+  	/* Highlight the current section in the navigation bar
+  	------------------------------------------------------ */
+	var sections = $("section"),
+	navigation_links = $("#main-nav-wrap li a");	
+
+	sections.waypoint( {
+
+       handler: function(direction) {
+
+		   var active_section;
+
+			active_section = $('section#' + this.element.id);
+
+			if (direction === "up") active_section = active_section.prev();
+
+			var active_link = $('#main-nav-wrap a[href="#' + active_section.attr("id") + '"]');			
+
+         navigation_links.parent().removeClass("current");
+			active_link.parent().addClass("current");
+
+		}, 
+
+		offset: '25%'
+	});
+
+
+	/*---------------------------------------------------- */
+  	/* Smooth Scrolling
+  	------------------------------------------------------ */
+  	$('.smoothscroll').on('click', function (e) {
+	 	
+	 	e.preventDefault();
+
+   	var target = this.hash,
+    	$target = $(target);
+
+    	$('html, body').stop().animate({
+       	'scrollTop': $target.offset().top
+      }, 800, 'swing', function () {
+      	window.location.hash = target;
+      });
+
+  	});  
+  
+
+   /*---------------------------------------------------- */
+	/*  Placeholder Plugin Settings
+	------------------------------------------------------ */ 
+	$('input, textarea, select').placeholder()  
+
+
+  	/*---------------------------------------------------- */
+	/*	contact form
+	------------------------------------------------------ */
+
+	/* local validation */
+	$('#contactForm').validate({
+
+		/* submit via ajax */
+		submitHandler: function(form) {
+
+			var sLoader = $('#submit-loader');
+
+			$.ajax({      	
+
+		      type: "POST",
+		      url: "inc/sendEmail.php",
+		      data: $(form).serialize(),
+		      beforeSend: function() { 
+
+		      	sLoader.fadeIn(); 
+
+		      },
+		      success: function(msg) {
+
+	            // Message was sent
+	            if (msg == 'OK') {
+	            	sLoader.fadeOut(); 
+	               $('#message-warning').hide();
+	               $('#contactForm').fadeOut();
+	               $('#message-success').fadeIn();   
+	            }
+	            // There was an error
+	            else {
+	            	sLoader.fadeOut(); 
+	               $('#message-warning').html(msg);
+		            $('#message-warning').fadeIn();
+	            }
+
+		      },
+		      error: function() {
+
+		      	sLoader.fadeOut(); 
+		      	$('#message-warning').html("Something went wrong. Please try again.");
+		         $('#message-warning').fadeIn();
+
+		      }
+
+	      });     		
+  		}
+
+	});
+
+
+ 	/*----------------------------------------------------- */
+  	/* Back to top
+   ------------------------------------------------------- */ 
+	var pxShow = 300; // height on which the button will show
+	var fadeInTime = 400; // how slow/fast you want the button to show
+	var fadeOutTime = 400; // how slow/fast you want the button to hide
+	var scrollSpeed = 300; // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
+
+   // Show or hide the sticky footer button
+	jQuery(window).scroll(function() {
+
+		if (!( $("#header-search").hasClass('is-visible'))) {
+
+			if (jQuery(window).scrollTop() >= pxShow) {
+				jQuery("#go-top").fadeIn(fadeInTime);
+			} else {
+				jQuery("#go-top").fadeOut(fadeOutTime);
+			}
+
+		}		
+
+	});		
 
 })(jQuery);
