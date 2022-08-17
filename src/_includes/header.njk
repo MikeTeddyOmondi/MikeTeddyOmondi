@@ -2,11 +2,11 @@
 
     <div class="row s-header__content">
 
-        <div class="s-header__logo">
+        {# <div class="s-header__logo">
             <a class="logo" href="/">
                 <img src="/assets/img/logo.svg" alt="Homepage">
             </a>
-        </div>
+        </div> #}
 
         <nav class="s-header__nav-wrap">
 
@@ -15,17 +15,17 @@
             <ul class="s-header__nav">
                 <li class="current"><a href="/" title="">Home</a></li>
                 <li class="">
-                    <a href="/blogs" title="">Blogs</a>
-                    {# <ul class="sub-menu" class="has-children">
+                    <a href="/blogs" title="">Categories</a>
+                    <ul class="sub-menu" class="has-children">
                         <li><a href="/category/">Agriculture</a></li>
                         <li><a href="/category/">Business</a></li>
                         <li><a href="/category/">Food</a></li>
                         <li><a href="/category/">Lifestyle</a></li>
                         <li><a href="/category/">Technology</a></li>
-                    </ul> #}
+                    </ul>
                 </li>
-                <li><a href="/about" title="">About</a></li>
-                <li><a href="/contact" title="">Contact</a></li>
+                {# <li><a href="/about" title="">About</a></li>
+                <li><a href="/contact" title="">Contact</a></li> #}
             </ul> <!-- end header__nav -->
 
             <a href="#0" title="Close Menu" class="s-header__overlay-close close-mobile-menu">Close</a>
@@ -38,8 +38,8 @@
                 
             <form role="search" method="get" class="s-header__search-form" action="#">
                 <label>
-                    <span class="hide-content">Search for:</span>
-                    <input type="search" class="s-header__search-field" placeholder="Type Your Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                    <span class="hide-content">Search for blog:</span>
+                    <input type="search" class="s-header__search-field" placeholder="Search here..." value="" name="s" title="Search for:" autocomplete="off">
                 </label>
                 <input type="submit" class="s-header__search-submit" value="Search">
             </form>
