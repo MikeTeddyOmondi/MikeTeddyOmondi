@@ -140,7 +140,7 @@ layout: base.njk
             <ul role="list" class="articles__list flow">
 
                 {% for post in collections.featured | reverse %}
-                    {# {% include 'article-snippet.njk' %} #}
+                    {% include 'article-snippet.njk' %}
                 {% endfor %}
             
             </ul>
