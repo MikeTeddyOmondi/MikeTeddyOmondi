@@ -35,9 +35,9 @@
  *
  * ------------------------------------------------------------------- 
  */
-@import url("fonts.css");
-@import url("font-awesome/css/font-awesome.min.css");
-@import url("micons/micons.css");
+@import url("/css/fonts.css");
+@import url("/css/font-awesome/css/font-awesome.min.css");
+@import url("/css/micons/micons.css");
 
 
 /** 
@@ -1096,7 +1096,7 @@ header .row {
 header .top-bar {
 	display: block;
 	background: #000000;
-	min-width: 220px;
+	min-width: 120px;
 	min-height: 66px;
 	position: absolute;
 	left: 90px;
@@ -1116,11 +1116,12 @@ header .logo a {
 	border: none;
 	font: 0/0 a;
 	text-shadow: none;
-	color: transparent;
+	/* color: transparent; */
+	color: #ffffff;
 	width: 92px;
 	height: 15px;
-	background: url("../images/logo.png") no-repeat center;
-	background-size: 92px 15px;
+	/* background: url("/assets/images/logo.png") no-repeat center; */
+	/* background-size: 92px 15px; */
 }
 
 /**
