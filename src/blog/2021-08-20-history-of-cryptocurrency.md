@@ -2,7 +2,7 @@
 title: History of Cryptocurrency
 author: Mike Teddy Omondi
 date: 2021-08-20
-tags: ["post", "featured"]
+tags: ["post"]
 image: /assets/blog/2021-08-20-history-of-cryptocurrency.jpg
 imageAlt: Business
 description: This article highlights on the history of cryptocurrency and how it was developed.
