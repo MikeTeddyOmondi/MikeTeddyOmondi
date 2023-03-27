@@ -1,6 +1,6 @@
 {
 	"name": "mike-teddy-omondi",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "A personal website that journals all the things Mike Teddy Omondi is enthusiastic about",
 	"main": "index.js",
 	"scripts": {
