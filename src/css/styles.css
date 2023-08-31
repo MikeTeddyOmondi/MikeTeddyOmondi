@@ -1792,8 +1792,15 @@ var, kbd, samp, code, pre {
 
 pre {
     padding: var(--vspace-0_75) var(--vspace-1) var(--vspace-1);
-    background: var(--color-gray-1);
+    background: var(--color-black);
     overflow-x: auto;
+    font-size: 20px;
+    border: 2px solid grey;
+    width: 100%;
+    border-left: 12px solid green;
+    border-radius: 5px;
+    /* padding: 14px; */
+    line-height: 24px;
 }
 
 code {
@@ -1804,7 +1811,7 @@ code {
     white-space: nowrap;
     background: var(--color-gray-1);
     border: 1px solid var(--color-gray-3);
-    color: var(--color-text);
+    color: var(--color-text-dark);
     border-radius: 3px;
 }
 
@@ -1815,6 +1822,16 @@ pre>code {
     padding: 0;
     margin: 0;
     border: none;
+}
+pre code {
+    display: block;
+    background: none;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    max-width: 100%;
+    min-width: 100px;
+    padding: 0;
 }
 
 del {
