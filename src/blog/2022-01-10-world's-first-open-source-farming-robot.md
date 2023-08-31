@@ -2,7 +2,7 @@
 title: World's First Open Source Farming Robot
 author: Mike Teddy Omondi
 date: 2022-01-10
-tags: ["post", "featured"]
+tags: ["post"]
 image: /assets/blog/2022-01-10-world's-first-open-source-farming-robot.jpg
 imageAlt: Agriculture, Technology
 description: This article is about the world's first open source farming robot.

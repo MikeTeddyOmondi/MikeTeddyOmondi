@@ -2,7 +2,7 @@
 title: Open Source Software
 author: Mike Teddy Omondi
 date: 2023-01-16
-tags: ["post", "featured"]
+tags: ["post"]
 image: /assets/blog/2023-01-16-open-source-software.jpg
 imageAlt: Software, Technology
 description: This article is about open source software.
