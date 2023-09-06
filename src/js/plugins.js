@@ -5,18 +5,18 @@
  * ------------------------------------------------------------------- */
 //
 
-// https://script.google.com/macros/s/AKfycbwx6rxe5Q6Xeuw7uV0TZwMFZqgNBqi6rJAxLqz6TZKzEM1zJepjAkZZ6LubzH4ijq4/exec
+// https://script.google.com/macros/s/AKfycbyRlxMHkJGFn0-d6VpKWJFNdZxrydsZ7f2j9kaKngR4flPK3DpwZO9v-78hHMQ-inz3/exec
 
 function saveToGoogleSheet() {
   var email = document.getElementById("mc-email").value;
   var url =
-    "https://script.google.com/macros/s/AKfycbwx6rxe5Q6Xeuw7uV0TZwMFZqgNBqi6rJAxLqz6TZKzEM1zJepjAkZZ6LubzH4ijq4/exec";
+    "https://script.google.com/macros/s/AKfycbyRlxMHkJGFn0-d6VpKWJFNdZxrydsZ7f2j9kaKngR4flPK3DpwZO9v-78hHMQ-inz3/exec";
 
   async function postData(data) {
     try {
       const response = await fetch(url, {
-        method: "POST",
         body: data,
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
