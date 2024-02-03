@@ -11,7 +11,7 @@
 	"author": "MikeTeddyOmondi",
 	"license": "MIT",
 	"devDependencies": {
-		"@11ty/eleventy": "^0.12.1",
-		"luxon": "^2.0.2"
+		"@11ty/eleventy": "^2.0.1",
+		"luxon": "^3.4.4"
 	}
 }
