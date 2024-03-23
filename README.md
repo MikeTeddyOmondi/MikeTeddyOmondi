@@ -2,7 +2,7 @@
 
 I'm Mike Teddy Omondi, a hobbyist web developer and tech enthusiast from Nairobi (Kenya), who loves working with free and open source software.
 
-:gear: I'm currently working on [Hotel El` Mariam](http://github.com/MikeTeddyOmondi/hotel-elmiriam), a hotel, bar and restaurant management system. Besides that, I'm also working on my [Intasend-rs](https://github.com/MikeTeddyOmondi/intasend-rs) a RUst client SDK for the [IntaSend](https://intasend.com) payment gateway and several other small web projects.
+:gear: I'm currently working on [Hotel El` Mariam](http://github.com/MikeTeddyOmondi/hotel-elmiriam), a hotel, bar and restaurant management system. Besides that, I'm also working on my [Intasend-rs](https://github.com/MikeTeddyOmondi/intasend-rs) a Rust client SDK for the [IntaSend](https://intasend.com) payment gateway and several other small web projects.
 
 :telescope: I'm currently experimenting with `Rust` and the `just` command runner system.
 
