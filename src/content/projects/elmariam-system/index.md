@@ -6,4 +6,4 @@ demoURL: ""
 repoURL: "https://github.com/MikeTeddyOmondi/hotel-elmiriam"
 ---
 
-An Hotel, Bar & Restaurant Management Information System
+A Hotel, Bar & Restaurant Management Information System
