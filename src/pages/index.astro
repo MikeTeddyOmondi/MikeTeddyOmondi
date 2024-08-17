@@ -1,0 +1,167 @@
+---
+import { getCollection } from "astro:content";
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+// import ContactForm from "@components/ContactForm.tsx";
+import Link from "@components/Link.astro";
+import { dateRange } from "@lib/utils";
+import { SITE, HOME, SOCIALS } from "@consts";
+
+const blog = (await getCollection("blog"))
+  .filter(post => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
+
+const projects = (await getCollection("projects"))
+  .filter(project => !project.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0,SITE.NUM_PROJECTS_ON_HOMEPAGE);
+
+const allwork = (await getCollection("work"))
+  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
+  .slice(0,SITE.NUM_WORKS_ON_HOMEPAGE);
+
+const work = await Promise.all(
+  allwork.map(async (item) => {
+    const { Content } = await item.render();
+    return { ...item, Content };
+  })
+);
+
+---
+
+<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <h4 class="animate font-semibold text-black dark:text-white">
+      Hi, I'm Mike Teddy Omondi <span class="text-xl">👋🏻</span>
+    </h4>
+    <div class="space-y-16">
+      <section>
+        <article class="space-y-4">
+          <p class="animate">
+            Welcome to my personal blog and portfolio — a junction of technology, creativity, and innovation.
+            Herein, I share some insights gained in the journey as a software developer, especially mentioning the construction
+            of robust and scalable solutions within the modern web development process. From working with
+            <Link href="https://nodejs.org" aria-label="Node.js Website" external>
+              Node.js
+            </Link>
+            and
+            <Link href="https://www.rust-lang.org" aria-label="Rust Website" external>
+              Rust
+            </Link>
+             to
+             <Link href="https://kubernetes.io/" aria-label="Kubernetes Website" external>
+              Kubernetes
+             </Link>,
+            or experimenting with AI-driven tools for penetration testing, this blog is going to be a platform for documenting challenges,
+            solutions, and breakthroughs encountered in my work.
+          </p>
+          <p class="animate">
+            Besides the technical articles, I have included various projects that show my passion for designing efficient systems, like creating 
+            custom Docker images for SPAs or managing virtual machines on Kubernetes with KubeVirt. This portfolio speaks not only to my technical 
+            abilities but also to the commitment towards the development of open source and a love for continuous learning.
+          </p>
+          <p class="animate">
+            Apart from my professional activities, I also track wider themes in technology—from cloud computing trends through to the ethical 
+            considerations of AI. I build a space where ideas prosper, and where developers, technologists, and curious minds engage with the 
+            shifting landscape of software engineering.
+          </p>
+        </article>
+      </section>
+
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Latest posts
+          </h5>
+          <Link href="/blog">
+            See all posts
+          </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {blog.map(post => (
+            <li>
+              <ArrowCard entry={post} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Work Experience
+          </h5>
+          <Link href="/work">
+            See all work
+          </Link>
+        </div>
+        <ul class="flex flex-col space-y-4">
+          {work.map(entry => (
+            <li>
+              <div class="text-sm opacity-75">
+                {dateRange(entry.data.dateStart, entry.data.dateEnd)}
+              </div>
+              <div class="font-semibold text-black dark:text-white">
+                {entry.data.company}
+              </div>
+              <div class="text-sm opacity-75">
+                {entry.data.role}
+              </div>
+              <article>
+                <entry.Content />
+              </article>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Recent projects
+          </h5>
+          <Link href="/projects">
+            See all projects
+          </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {projects.map(project => (
+            <li>
+              <ArrowCard entry={project} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="animate space-y-4">
+        <h5 class="font-semibold text-black dark:text-white">
+          Let's Connect
+        </h5>
+        <article>
+          <p>
+            If you want to get in touch with me about something or just to say hi,
+            reach out on social media or send me an email.
+          </p>
+        </article>
+        <ul class="flex flex-wrap gap-2">
+          {SOCIALS.map(SOCIAL => (
+            <li class="flex gap-x-2 text-nowrap">
+              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
+                {SOCIAL.NAME}
+              </Link>
+              {"/"}
+            </li>
+          ))}
+          <li class="line-clamp-1">
+            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
+              {SITE.EMAIL}
+            </Link>
+          </li>
+        </ul>
+      </section>
+      
+    </div>
+  </Container>
+</PageLayout>
