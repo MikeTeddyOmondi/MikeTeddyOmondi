@@ -1,28 +1,28 @@
 # Hi there! :wave:
 
-I'm Mike Teddy Omondi, a hobbyist web developer and tech enthusiast from Nairobi (Kenya), who loves working with free and open source software.
+I'm Mike Teddy Omondi, a full stack developer and tech enthusiast from Nairobi (Kenya), who loves working with free and open source software.
 
-:gear: I'm currently working on [Hotel El` Mariam](http://github.com/MikeTeddyOmondi/hotel-elmiriam), a hotel, bar and restaurant management system. Besides that, I'm also working on my [Intasend-rs](https://github.com/MikeTeddyOmondi/intasend-rs) a Rust client SDK for the [IntaSend](https://intasend.com) payment gateway and several other small web projects.
+:gear: I've been working on [Hotel El` Mariam](http://github.com/MikeTeddyOmondi/hotel-elmiriam), a hotel, bar and restaurant management system. Besides that, I'm also working on my [Intasend-rs](https://github.com/MikeTeddyOmondi/intasend-rs) a Rust client SDK for the [IntaSend](https://intasend.com) payment gateway and several other small web projects.
 
-:telescope: I'm currently experimenting with `Rust` and the `just` command runner system.
+:telescope: I'm currently tinkering with `Rust` and `Go` in building `Locci Cloud`, a platform as a service.
 
 ## :toolbox: Technology Stacks
 
 Languages 
 
-![My Skills](https://skillicons.dev/icons?i=cpp,py,js,ts,rust&theme=light)
+![My Skills](https://skillicons.dev/icons?i=js,ts,rust,go&theme=light)
 
 Frontend frameworks & Web Technologies
 
-![My Skills](https://skillicons.dev/icons?i=react,svelte,solidjs,next,astro,tailwind,md&theme=light)
+![My Skills](https://skillicons.dev/icons?i=react,svelte,next,astro,tailwind,md&theme=light)
 
 Backend Frameworks (Web, Mobile & Desktop)
 
-![My Skills](https://skillicons.dev/icons?i=bun,nodejs,express,fastapi,django,flask,electron,tauri,graphql,prisma&theme=light)
+![My Skills](https://skillicons.dev/icons?i=bun,nodejs,express,fastapi,django,electron,tauri,prisma,drizzle&theme=light)
 
 Containerisation, Orchestration, Databases & Other Platforms
 
-![My Skills](https://skillicons.dev/icons?i=wasm,docker,kubernetes,windows,linux,ubuntu,mint,nginx,rabbitmq,redis,sqlite,mysql,planetscale,postgres,supabase,mongodb,heroku,cloudflare,git,github,npm,jenkins,prometheus,grafana,terraform,stackoverflow,vscode,neovim,pnpm&theme=light)
+![My Skills](https://skillicons.dev/icons?i=wasm,docker,kubernetes,windows,linux,ubuntu,nginx,rabbitmq,redis,mysql,postgres,mongodb,cloudflare,git,github,npm,prometheus,grafana,terraform,vscode,pnpm&theme=light)
 
 
 I love web technologies in general. I'm also a big fan of Linux, Nginx, Docker and other open source software. Visual Studio Code & Neovim are my favorite IDEs.
