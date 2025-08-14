@@ -6,6 +6,6 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-nano-demo.vercel.app",
+  site: "https://miketeddyomondi.dev",
   integrations: [mdx(), sitemap(), tailwind(), react()]
 });
